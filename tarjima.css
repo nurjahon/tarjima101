@@ -1,0 +1,144 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    opacity: 0;
+    animation: slideIn 0.5s ease-in forwards;
+}
+
+nav ul li:nth-child(1) { animation-delay: 0.2s; }
+nav ul li:nth-child(2) { animation-delay: 0.4s; }
+nav ul li:nth-child(3) { animation-delay: 0.6s; }
+nav ul li:nth-child(4) { animation-delay: 0.8s; }
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.hero {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideUp 1s forwards 0.5s;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: fadeInText 1.5s forwards 1s;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff7b00;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeInButton 1.5s forwards 1.5s;
+}
+
+button:hover {
+    background-color: #e56700;
+}
+
+.content {
+    padding: 50px 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards 1s;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 200px;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideUp 1s forwards;
+}
+
+.card:nth-child(1) { animation-delay: 2s; }
+.card:nth-child(2) { animation-delay: 2.2s; }
+.card:nth-child(3) { animation-delay: 2.4s; }
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards 2s;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-30px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInButton {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
